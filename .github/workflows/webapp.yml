@@ -13,7 +13,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            backend:
+              - 'backend/**'
       - name: Build backend application
+        if: steps.filter.outputs.backend == 'true'
         uses: ./.github/actions/build
         with:
           application: backend
@@ -74,14 +81,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - uses: dorny/paths-filter@v3
-        id: filter
-        with:
-          filters: |
-            backend:
-              - 'backend/**'
       - name: Run API tests
-        if: steps.filter.outputs.backend == 'true'
         uses: ./.github/actions/test
         with:
           test_env: DEV
