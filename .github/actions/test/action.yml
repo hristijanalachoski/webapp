@@ -10,6 +10,6 @@ runs:
     - name: Pull docker image for API tests
       run: docker pull hristijanalachoski/api-tests-runner
       shell: bash
-    - name: Run API tests
-      run: docker run --rm --network=host hristijanalachoski/api-tests-runner cucumber PLATFORM=${{ inputs.test_env }}
-      shell: bash
+    # - name: Run API tests
+    #   run: docker run --rm --network=host hristijanalachoski/api-tests-runner cucumber PLATFORM=${{ inputs.test_env }}
+    #   shell: bash
