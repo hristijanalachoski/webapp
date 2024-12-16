@@ -7,11 +7,11 @@ services:
     volumes:
       - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
-      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_PASSWORD=password
       - POSTGRES_DB=mydatabase
   backend:
     build: ./backend
-    image: mtararujs/webapp-backend
+    image: hristijanalachoski/webapp-backend
     container_name: backend
     ports:
       - 5050:5050
@@ -31,8 +31,8 @@ services:
   frontend:
     build:
       context: frontend
-      dockerfile: Dockerfile-multi-stage
-    image: mtararujs/webapp-frontend
+      dockerfile: Dockerfile-single-stage
+    image: hristijanalachoski/webapp-frontend
     container_name: frontend
     ports:
       - 80:80

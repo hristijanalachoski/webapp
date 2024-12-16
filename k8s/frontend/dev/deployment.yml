@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend-dev
-        image: mtararujs/webapp-frontend
+        image: hristijanalachoski/webapp-frontend
         ports:
         - containerPort: 80
       

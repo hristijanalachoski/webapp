@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: postgres-db
-        image: mtararujs/postgres:latest
+        image: hristijanalachoski/postgres:latest
         ports:
         - containerPort: 5432
         env:
         - name: POSTGRES_PASSWORD
-          value: mysecretpassword
+          value: password
         - name: POSTGRES_DB
           value: mydatabase
       
