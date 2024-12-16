@@ -18,12 +18,12 @@ jobs:
     steps:
       - run: echo "Building Frontend.."
   deploy-backend-dev:
-    name: Delploy Backend to Kubernetes
+    name: Deploy Backend to Kubernetes
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying Backend.."
   deploy-frontend-dev:
-    name: Delploy Frontend to Kubernetes
+    name: Deploy Frontend to Kubernetes
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying Frontend.."
@@ -33,12 +33,12 @@ jobs:
     steps:
       - run: echo "Running tests.."
   deploy-backend-stg:
-    name: Delploy Backend to Kubernetes
+    name: Deploy Backend to Kubernetes
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying Backend.."
   deploy-frontend-stg:
-    name: Delploy Frontend to Kubernetes
+    name: Deploy Frontend to Kubernetes
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying Frontend.."
@@ -48,12 +48,12 @@ jobs:
     steps:
       - run: echo "Running tests.."
   deploy-backend-prd:
-    name: Delploy Backend to Kubernetes
+    name: Deploy Backend to Kubernetes
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying Backend.."
   deploy-frontend-prd:
-    name: Delploy Frontend to Kubernetes
+    name: Deploy Frontend to Kubernetes
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying Frontend.."
