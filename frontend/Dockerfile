@@ -11,6 +11,7 @@ FROM nginx:alpine
 COPY --from=build-stage /frontend-app/build /usr/share/nginx/html
 CMD [ "nginx", "-g", "daemon off;" ]
 
+
 # 1. Navigate to the `frontend` directory:
 
 #     ```sh

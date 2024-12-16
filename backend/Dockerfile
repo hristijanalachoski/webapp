@@ -12,8 +12,6 @@ EXPOSE 5050
 CMD [ "start" ]
 ENTRYPOINT [ "npm" ]
 
-
-
 # $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 
 

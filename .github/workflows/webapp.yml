@@ -113,7 +113,7 @@ jobs:
         uses: ./.github/actions/deploy
         with:
           deployment_name: backend-deployment-stg
-          deployment_pod_name: backend-dev
+          deployment_pod_name: backend-stg
           docker_image_tag: hristijanalachoski/webapp-backend:$GITHUB_SHA
 
   test-stg:
