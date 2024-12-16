@@ -6,7 +6,7 @@ inputs:
   deployment_pod_name: 
     description: '..'
     required: true
-  deployment_image_tag: 
+  docker_image_tag: 
     description: '..'
     required: true
 runs:
