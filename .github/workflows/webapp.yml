@@ -68,6 +68,7 @@ jobs:
           docker_image_name: hristijanalachoski/webapp-frontend
       - name: Deploy backend
         if: steps.filter.outputs.backend == 'true'
+        uses: ./.github/actions/deploy
         with:
           deployment_name: backend-deployment-dev
           deployment_pod_name: backend-dev
