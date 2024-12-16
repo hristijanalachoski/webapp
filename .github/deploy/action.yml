@@ -1,0 +1,20 @@
+name: 'Perform deployment to Kubernetes'
+inputs:
+  deployment_name:
+    description: '..'
+    required: true
+  deployment_pod_name: 
+    description: '..'
+    required: true
+  deployment_image_tag: 
+    description: '..'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Perform rolling deployment
+      run: kubectl set image ${{ inputs.deployment_name }} ${{ inputs.deployment_pod_name }}=${{ inputs.deployment_image_tag }}
+      shell: bash
+    - name: Perform rolling restart
+      run: kubectl rollout restart deployment ${{ inputs.deployment_name }}
+      shell: bash
